@@ -1,7 +1,7 @@
 {
   "name": "dash-backend",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -17,7 +17,7 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
-    "dev": "nodemon",
-    "prod": "pm2 start src/index.js --name dash-backend"
+    "dev": "nodemon index.js",
+    "prod": "pm2 start index.js --name dash-backend"
   }
 }
