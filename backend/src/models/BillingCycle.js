@@ -1,7 +1,8 @@
 const restful = require("node-restful");
+const CreditSchema = require("./Credit");
+const DebitSchema = require("./Debit");
+
 const mongoose = restful.mongoose;
-require("./Credit");
-require("./Debit");
 
 const BillingCycleSchema = new mongoose.Schema({
   name: { type: String, require: true },
