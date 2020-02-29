@@ -1,5 +1,4 @@
 import {
-  Divider,
   Drawer,
   List,
   ListItem,
@@ -61,10 +60,6 @@ export default function Header() {
     setIsOpen(false);
   };
 
-  const styles = {
-    navBar: { top: AppBar.height }
-  };
-
   const toggleDrawer = (side, open) => event => {
     if (
       event.type === "keydown" &&
@@ -83,17 +78,6 @@ export default function Header() {
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
       <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem button key={text}>
