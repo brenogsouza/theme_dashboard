@@ -1,7 +1,12 @@
 import React from "react";
+import Header from "./layout/header";
 
 function App() {
-  return <h1>ola</h1>;
+  return (
+    <div className="wrapper">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
